@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exclusive - Online Shopping</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-message">
+      Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+      <a href="#">Shop Now</a>
+    </div>
+    <div class="topbar-links">
+      <select>
+        <option>English</option>
+        <option>Urdu</option>
+        <option>Arabic</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Exclusive</a>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="shop.html">Shop</a>
+
+      </nav>
+      <div class="header-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="What are you looking for?" />
+          <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+        <a href="wishlist.html" class="header-icon-btn">
+          <i class="far fa-heart"></i><span class="badge">4</span>
+        </a>
+        <a href="cart.html" class="header-icon-btn">
+          <i class="fas fa-shopping-cart"></i><span class="badge cart-badge">3</span>
+        </a>
+        <a href="account.html" class="header-icon-btn">
+          <i class="far fa-user"></i>
+        </a>
+        <div class="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="container" style="height:100%;display:flex;gap:0;padding:0 24px;">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+
+        <div class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="toggleDropdown(this); return false;">
+            Woman's Fashion <i class="fas fa-chevron-right sidebar-arrow"></i>
+          </a>
+          <div class="sidebar-dropdown">
+            <a href="#">Dresses</a>
+            <a href="#">Tops &amp; Blouses</a>
+            <a href="#">Jeans &amp; Pants</a>
+            <a href="#">Shoes &amp; Heels</a>
+            <a href="#">Bags &amp; Purses</a>
+            <a href="#">Jewellery</a>
+          </div>
+        </div>
+
+        <div class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="toggleDropdown(this); return false;">
+            Men's Fashion <i class="fas fa-chevron-right sidebar-arrow"></i>
+          </a>
+          <div class="sidebar-dropdown">
+            <a href="#">T-Shirts</a>
+            <a href="#">Shirts</a>
+            <a href="#">Jeans &amp; Pants</a>
+            <a href="#">Shoes &amp; Sneakers</a>
+            <a href="#">Watches</a>
+            <a href="#">Bags &amp; Wallets</a>
+          </div>
+        </div>
+
+        <div class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="toggleDropdown(this); return false;">
+            Electronics <i class="fas fa-chevron-right sidebar-arrow"></i>
+          </a>
+          <div class="sidebar-dropdown">
+            <a href="#">Phones &amp; Tablets</a>
+            <a href="#">Laptops &amp; Computers</a>
+            <a href="#">Cameras</a>
+            <a href="#">Headphones</a>
+            <a href="#">Gaming</a>
+            <a href="#">Smart Watches</a>
+            <a href="#">TV &amp; Monitors</a>
+          </div>
+        </div>
+
+        <div class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="toggleDropdown(this); return false;">
+            Home &amp; Lifestyle <i class="fas fa-chevron-right sidebar-arrow"></i>
+          </a>
+          <div class="sidebar-dropdown">
+            <a href="#">Furniture</a>
+            <a href="#">Kitchen &amp; Dining</a>
+            <a href="#">Bedding</a>
+            <a href="#">Home Decor</a>
+            <a href="#">Lighting</a>
+          </div>
+        </div>
+
+        <div class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="toggleDropdown(this); return false;">
+            Medicine <i class="fas fa-chevron-right sidebar-arrow"></i>
+          </a>
+          <div class="sidebar-dropdown">
+            <a href="#">Vitamins &amp; Supplements</a>
+            <a href="#">Pain Relief</a>
+            <a href="#">First Aid</a>
+            <a href="#">Cold &amp; Flu</a>
+          </div>
+        </div>
+
+        <div class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="toggleDropdown(this); return false;">
+            Sports &amp; Outdoor <i class="fas fa-chevron-right sidebar-arrow"></i>
+          </a>
+          <div class="sidebar-dropdown">
+            <a href="#">Exercise Equipment</a>
+            <a href="#">Sportswear</a>
+            <a href="#">Cycling</a>
+            <a href="#">Swimming</a>
+            <a href="#">Camping &amp; Hiking</a>
+          </div>
+        </div>
+
+        <div class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="toggleDropdown(this); return false;">
+            Baby's &amp; Toys <i class="fas fa-chevron-right sidebar-arrow"></i>
+          </a>
+          <div class="sidebar-dropdown">
+            <a href="#">Baby Clothing</a>
+            <a href="#">Toys &amp; Games</a>
+            <a href="#">Baby Gear</a>
+            <a href="#">Educational Toys</a>
+          </div>
+        </div>
+
+        <div class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="toggleDropdown(this); return false;">
+            Groceries &amp; Pets <i class="fas fa-chevron-right sidebar-arrow"></i>
+          </a>
+          <div class="sidebar-dropdown">
+            <a href="#">Fresh Produce</a>
+            <a href="#">Snacks &amp; Beverages</a>
+            <a href="#">Pet Food</a>
+            <a href="#">Pet Accessories</a>
+          </div>
+        </div>
+
+        <div class="sidebar-item">
+          <a href="#" class="sidebar-link" onclick="toggleDropdown(this); return false;">
+            Health &amp; Beauty <i class="fas fa-chevron-right sidebar-arrow"></i>
+          </a>
+          <div class="sidebar-dropdown">
+            <a href="#">Skincare</a>
+            <a href="#">Haircare</a>
+            <a href="#">Makeup</a>
+            <a href="#">Perfumes</a>
+            <a href="#">Personal Care</a>
+          </div>
+        </div>
+
+      </nav>
+    </aside>
+
+    <!-- Hero Banner Slider -->
+    <div class="hero-banner">
+
+      <!-- Slide 1 -->
+      <div class="hero-slide">
+        <img src="images/hero.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;" />
+        <div class="hero-content">
+          <div class="hero-brand">
+            <div style="width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;">🍎</div>
+            <span class="hero-brand-name">iPhone 17 Series</span>
+          </div>
+          <h1 class="hero-title">Up to 10% off Voucher</h1>
+          <a href="shop.html" class="hero-cta">
+            Shop Now <i class="fas fa-arrow-right" style="margin-left:6px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide">
+        <img src="images/hero1.1.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;" />
+        <div class="hero-content">
+          <div class="hero-brand">
+            <span style="font-size:24px;">🎮</span>
+            <span class="hero-brand-name">Gaming Gear</span>
+          </div>
+          <h1 class="hero-title">Level Up Your Setup Today</h1>
+          <a href="shop.html" class="hero-cta">
+            Explore Now <i class="fas fa-arrow-right" style="margin-left:6px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide">
+        <img src="images/hero2.jpg" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.85;" />
+        <div class="hero-content">
+          <div class="hero-brand">
+            <span style="font-size:24px;">👟</span>
+            <span class="hero-brand-name">Fashion Week</span>
+          </div>
+          <h1 class="hero-title">New Season Collection</h1>
+          <a href="shop.html" class="hero-cta">
+            Shop Collection <i class="fas fa-arrow-right" style="margin-left:6px;"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Dots -->
+      <div class="hero-dots">
+        <div class="hero-dot"></div>
+        <div class="hero-dot"></div>
+        <div class="hero-dot"></div>
+      </div>
+
+      <!-- Arrows -->
+      <div class="hero-arrows">
+        <button class="hero-arrow hero-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="hero-arrow hero-next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+    </div>
+    <!-- End Slider -->
+
+  </div>
+</section>
+<!-- End Hero Section -->
+
+<!-- FLASH SALE -->
+<section class="section flash-sale">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag-label">
+        <div class="tag-bar"></div>
+        <span class="tag-text">Today's</span>
+      </div>
+      <div class="section-title-row" style="flex-wrap:wrap;gap:24px;">
+        <div style="display:flex;align-items:center;gap:40px;flex-wrap:wrap;">
+          <h2 class="section-title">Flash Sales</h2>
+          <div class="countdown" id="flash-countdown">
+            <div class="countdown-units">
+              <div class="count-unit"><span class="count-label">Days</span><span class="count-num h">03</span></div>
+              <span class="count-sep">:</span>
+              <div class="count-unit"><span class="count-label">Hours</span><span class="count-num m" style="color:var(--primary);">23</span></div>
+              <span class="count-sep">:</span>
+              <div class="count-unit"><span class="count-label">Minutes</span><span class="count-num h">19</span></div>
+              <span class="count-sep">:</span>
+              <div class="count-unit"><span class="count-label">Seconds</span><span class="count-num s">56</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="arrow-btns">
+          <button class="arrow-btn"><i class="fas fa-arrow-left"></i></button>
+          <button class="arrow-btn"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="product-badge badge-sale">-40%</span>
+          <img src="https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_SX679_.jpg" alt="HAVIT HV-G92 Gamepad" loading="lazy" />
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+            <button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button>
+          </div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">HAVIT HV-G92 Gamepad</p>
+          <div class="product-price"><span class="price-current">$120</span><span class="price-original">$160</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(88)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="product-badge badge-sale">-35%</span>
+          <img src="https://m.media-amazon.com/images/I/41hnm6yXAnL._AC_SX679_.jpg" alt="AK-900 Wired Keyboard" loading="lazy" />
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+            <button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button>
+          </div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">AK-900 Wired Keyboard</p>
+          <div class="product-price"><span class="price-current">$960</span><span class="price-original">$1160</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i></div><span class="rating-count">(75)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="product-badge badge-sale">-30%</span>
+          <img src="https://m.media-amazon.com/images/I/71Cluf3yhKL._AC_SX679_.jpg" alt="IPS LCD Gaming Monitor" loading="lazy" />
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+            <button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button>
+          </div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">IPS LCD Gaming Monitor</p>
+          <div class="product-price"><span class="price-current">$370</span><span class="price-original">$400</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(99)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="product-badge badge-sale">-25%</span>
+          <img src="https://m.media-amazon.com/images/I/71Fr+XT4HpL._AC_SX679_.jpg" alt="S-Series Comfort Chair" loading="lazy" />
+          <div class="product-actions">
+            <button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button>
+            <button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button>
+          </div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">S-Series Comfort Chair</p>
+          <div class="product-price"><span class="price-current">$375</span><span class="price-original">$400</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i></div><span class="rating-count">(99)</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:40px;">
+      <a href="shop.html" class="btn btn-primary">View All Products</a>
+    </div>
+    <hr style="margin-top:60px;border:none;border-top:1px solid var(--border);" />
+  </div>
+</section>
+
+<!-- BROWSE BY CATEGORY -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag-label"><div class="tag-bar"></div><span class="tag-text">Categories</span></div>
+      <div class="section-title-row">
+        <h2 class="section-title">Browse By Category</h2>
+        <div class="arrow-btns">
+          <button class="arrow-btn"><i class="fas fa-arrow-left"></i></button>
+          <button class="arrow-btn"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="categories-grid">
+      <div class="category-card"><div class="cat-icon">📱</div><span class="cat-name">Phones</span></div>
+      <div class="category-card"><div class="cat-icon">💻</div><span class="cat-name">Computers</span></div>
+      <div class="category-card active"><div class="cat-icon">⌚</div><span class="cat-name">SmartWatch</span></div>
+      <div class="category-card"><div class="cat-icon">📷</div><span class="cat-name">Camera</span></div>
+      <div class="category-card"><div class="cat-icon">🎧</div><span class="cat-name">HeadPhones</span></div>
+      <div class="category-card"><div class="cat-icon">🎮</div><span class="cat-name">Gaming</span></div>
+    </div>
+    <hr style="margin-top:60px;border:none;border-top:1px solid var(--border);" />
+  </div>
+</section>
+
+<!-- BEST SELLING -->
+<section class="section best-selling">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag-label"><div class="tag-bar"></div><span class="tag-text">This Month</span></div>
+      <div class="section-title-row">
+        <h2 class="section-title">Best Selling Products</h2>
+        <a href="shop.html" class="btn btn-primary" style="padding:12px 32px;">View All</a>
+      </div>
+    </div>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/61sWXOqFYgL._AC_SX679_.jpg" alt="The North Coat" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">The North Coat</p>
+          <div class="product-price"><span class="price-current">$260</span><span class="price-original">$360</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(65)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/71JvRMAlpHL._AC_SX679_.jpg" alt="Gucci duffle bag" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Gucci duffle bag</p>
+          <div class="product-price"><span class="price-current">$960</span><span class="price-original">$1160</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(35)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/61mMVJp9NrL._AC_SX679_.jpg" alt="RGB liquid CPU Cooler" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">RGB liquid CPU Cooler</p>
+          <div class="product-price"><span class="price-current">$160</span><span class="price-original">$170</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(55)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/71dUVWhFpqL._AC_SX679_.jpg" alt="Small BookShelf" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Small BookShelf</p>
+          <div class="product-price"><span class="price-current">$360</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(75)</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BANNER AD -->
+<section class="container">
+  <div class="banner-ad">
+    <div class="banner-ad-inner">
+      <div class="banner-ad-content">
+        <span class="banner-ad-tag">Categories</span>
+        <h2 class="banner-ad-title">Enhance Your<br>Music Experience</h2>
+        <div class="banner-countdown" id="banner-countdown">
+          <div class="banner-count-unit"><div class="banner-count-num h">05</div><div class="banner-count-label">Hours</div></div>
+          <div class="banner-count-unit"><div class="banner-count-num m">59</div><div class="banner-count-label">Days</div></div>
+          <div class="banner-count-unit"><div class="banner-count-num s">35</div><div class="banner-count-label">Minutes</div></div>
+          <div class="banner-count-unit"><div class="banner-count-num" style="background:var(--success);min-width:48px;">12</div><div class="banner-count-label">Seconds</div></div>
+        </div>
+        <a href="shop.html" class="btn btn-primary" style="align-self:flex-start;">Buy Now!</a>
+      </div>
+      <div class="banner-ad-img" style="background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;">
+        <div style="font-size:160px;filter:drop-shadow(0 0 40px rgba(0,194,203,0.4));">🔊</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE PRODUCTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag-label"><div class="tag-bar"></div><span class="tag-text">Our Products</span></div>
+      <div class="section-title-row">
+        <h2 class="section-title">Explore Our Products</h2>
+        <div class="arrow-btns">
+          <button class="arrow-btn"><i class="fas fa-arrow-left"></i></button>
+          <button class="arrow-btn"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-tabs" style="margin-bottom:32px;">
+      <button class="filter-tab active">All</button>
+      <button class="filter-tab">Electronics</button>
+      <button class="filter-tab">Fashion</button>
+      <button class="filter-tab">Home</button>
+      <button class="filter-tab">Sports</button>
+    </div>
+
+    <div class="explore-grid">
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="product-badge badge-new">NEW</span>
+          <img src="https://m.media-amazon.com/images/I/71NuBuMR3OL._AC_SX679_.jpg" alt="Breed Dry Dog Food" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Breed Dry Dog Food</p>
+          <div class="product-price"><span class="price-current">$100</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(35)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/81fPHuBM6FL._AC_SX679_.jpg" alt="CANON EOS DSLR Camera" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">CANON EOS DSLR Camera</p>
+          <div class="product-price"><span class="price-current">$360</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(95)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="product-badge badge-sale">-30%</span>
+          <img src="https://m.media-amazon.com/images/I/71dk2K4aP1L._AC_SX679_.jpg" alt="ASUS FHD Gaming Laptop" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">ASUS FHD Gaming Laptop</p>
+          <div class="product-price"><span class="price-current">$700</span><span class="price-original">$1000</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(325)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/71PX8ULLT2L._AC_SX679_.jpg" alt="Curology Product Set" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Curology Product Set</p>
+          <div class="product-price"><span class="price-current">$500</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(145)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="product-badge badge-new">NEW</span>
+          <img src="https://m.media-amazon.com/images/I/617mFq4gFgL._AC_SX679_.jpg" alt="Kids Electric Car" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Kids Electric Car</p>
+          <div class="product-price"><span class="price-current">$960</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(65)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/71bVKBPbMLL._AC_SX679_.jpg" alt="Jr. Zoom Soccer Cleats" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Jr. Zoom Soccer Cleats</p>
+          <div class="product-price"><span class="price-current">$1160</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(35)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="product-badge badge-sale">-40%</span>
+          <img src="https://m.media-amazon.com/images/I/71lnAL+x7+L._AC_SX679_.jpg" alt="GP11 Shooter USB Gamepad" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">GP11 Shooter USB Gamepad</p>
+          <div class="product-price"><span class="price-current">$660</span><span class="price-original">$1160</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(55)</span></div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/61yK84KYZPL._AC_SX679_.jpg" alt="Quilted Satin Jacket" loading="lazy" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Quilted Satin Jacket</p>
+          <div class="product-price"><span class="price-current">$660</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star" style="color:var(--border)"></i></div><span class="rating-count">(55)</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="load-more-wrap">
+      <a href="shop.html" class="btn btn-primary">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- NEW ARRIVAL -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="tag-label"><div class="tag-bar"></div><span class="tag-text">Featured</span></div>
+      <h2 class="section-title">New Arrival</h2>
+    </div>
+    <div class="arrival-grid">
+      <div class="arrival-main" style="cursor:pointer;">
+        <div style="background:linear-gradient(135deg,#0a0a0a 0%,#1a1a2e 100%);width:100%;height:100%;display:flex;align-items:flex-end;padding:32px;position:relative;">
+          <div style="font-size:100px;position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);">🎮</div>
+          <div class="arrival-overlay" style="background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:24px;">
+            <p class="arrival-label">Featured</p>
+            <h3 class="arrival-name">PlayStation 5</h3>
+            <p style="color:rgba(255,255,255,0.6);font-size:12px;margin-bottom:8px;">Black and White version of the PS5 coming out on sale.</p>
+            <a href="shop.html" class="arrival-link">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="arrival-sub">
+        <div class="arrival-card" style="cursor:pointer;">
+          <div style="background:linear-gradient(135deg,#1c1208,#3d2b0f);width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center;">
+            <div style="font-size:80px;">👗</div>
+            <div class="arrival-overlay" style="background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:20px;">
+              <p class="arrival-label">Featured</p>
+              <h3 class="arrival-name" style="font-size:16px;">Women's Collections</h3>
+              <p style="color:rgba(255,255,255,0.6);font-size:11px;margin-bottom:8px;">Featured woman collections that give you another vibe.</p>
+              <a href="shop.html" class="arrival-link" style="font-size:12px;">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <div class="arrival-card" style="cursor:pointer;">
+            <div style="background:linear-gradient(135deg,#0d0d0d,#1a1a1a);width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center;">
+              <div style="font-size:60px;">🔊</div>
+              <div class="arrival-overlay" style="background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:16px;">
+                <h3 class="arrival-name" style="font-size:14px;">Speakers</h3>
+                <p style="color:rgba(255,255,255,0.6);font-size:11px;margin-bottom:6px;">Amazon wireless speakers</p>
+                <a href="shop.html" class="arrival-link" style="font-size:11px;">Shop Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="arrival-card" style="cursor:pointer;">
+            <div style="background:linear-gradient(135deg,#1c0d12,#3d1a24);width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center;">
+              <div style="font-size:60px;">🌸</div>
+              <div class="arrival-overlay" style="background:linear-gradient(transparent,rgba(0,0,0,0.8));padding:16px;">
+                <h3 class="arrival-name" style="font-size:14px;">Perfume</h3>
+                <p style="color:rgba(255,255,255,0.6);font-size:11px;margin-bottom:6px;">GUCCI INTENSE OUD EDP</p>
+                <a href="shop.html" class="arrival-link" style="font-size:11px;">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" style="padding-bottom:80px;">
+  <div class="container">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon-wrap" style="background:#000;"><i class="fas fa-shipping-fast service-icon" style="font-size:28px;"></i></div>
+        <div><h3 class="service-title">FREE AND FAST DELIVERY</h3><p class="service-desc">Free delivery for all orders over $140</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-wrap" style="background:#000;"><i class="fas fa-headset service-icon" style="font-size:28px;"></i></div>
+        <div><h3 class="service-title">24/7 CUSTOMER SERVICE</h3><p class="service-desc">Friendly 24/7 customer support</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-wrap" style="background:#000;"><i class="fas fa-shield-alt service-icon" style="font-size:28px;"></i></div>
+        <div><h3 class="service-title">MONEY BACK GUARANTEE</h3><p class="service-desc">We return money within 30 days</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Exclusive</div>
+        <p style="color:rgba(255,255,255,0.8);font-weight:500;font-size:14px;">Subscribe</p>
+        <p class="footer-desc">Get 10% off your first order</p>
+        <form class="newsletter-form" onsubmit="return false;">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</a></li>
+          <li><a href="mailto:exclusive@gmail.com">exclusive@gmail.com</a></li>
+          <li><a href="tel:+88015888889999">+88015-88888-9999</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <ul>
+          <li><a href="account.html">My Account</a></li>
+          <li><a href="signup.html">Login / Register</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="#">Shop</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Link</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-newsletter">
+        <h4>Download App</h4>
+        <p style="color:rgba(255,255,255,0.5);font-size:11px;margin-bottom:12px;">Save $3 with App New User Only</p>
+        <div style="display:flex;gap:12px;margin-bottom:20px;">
+          <div style="width:80px;height:80px;background:#fff;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:40px;">📱</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <a href="#"><div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:6px 10px;display:flex;align-items:center;gap:6px;"><i class="fab fa-google-play" style="font-size:16px;"></i><div><div style="font-size:9px;color:rgba(255,255,255,0.6);">GET IT ON</div><div style="font-size:11px;font-weight:600;">Google Play</div></div></div></a>
+            <a href="#"><div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:4px;padding:6px 10px;display:flex;align-items:center;gap:6px;"><i class="fab fa-apple" style="font-size:18px;"></i><div><div style="font-size:9px;color:rgba(255,255,255,0.6);">Download on the</div><div style="font-size:11px;font-weight:600;">App Store</div></div></div></a>
+          </div>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; Copyright Rimel 2022. All rights reserved &nbsp;|&nbsp; Built by <span>Exclusive Team</span></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll To Top -->
+<button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- Sidebar Dropdown -->
+<script>
+function toggleDropdown(link) {
+  const item = link.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.sidebar-item.open').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+
+<script src="js/main.js"></script>
+</body>
+</html>

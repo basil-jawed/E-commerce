@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist - Exclusive</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<div class="topbar"><div class="container"><div class="topbar-message">Summer Sale! Free Express Delivery - OFF 50%! <a href="#">Shop Now</a></div></div></div>
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Exclusive</a>
+      <nav class="nav"><a href="index.html">Home</a><a href="contact.html">Contact</a><a href="about.html">About</a><a href="signup.html">Sign Up</a></nav>
+      <div class="header-actions">
+        <div class="search-bar"><input type="text" placeholder="What are you looking for?" /><button type="button"><i class="fas fa-search"></i></button></div>
+        <a href="wishlist.html" class="header-icon-btn"><i class="far fa-heart"></i><span class="badge">4</span></a>
+        <a href="cart.html" class="header-icon-btn"><i class="fas fa-shopping-cart"></i><span class="badge">3</span></a>
+        <a href="account.html" class="header-icon-btn"><i class="far fa-user"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <!-- Header row -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:40px;">
+      <h2 style="font-size:20px;font-weight:500;">Wishlist <span style="font-weight:400;color:var(--text-secondary);">(4)</span></h2>
+      <button class="btn btn-secondary" onclick="document.querySelector('.products-grid').querySelectorAll('.btn-primary').forEach(b=>b.click())">Move All To Bag</button>
+    </div>
+
+    <div class="products-grid">
+      <!-- Wishlist Product 1 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="product-badge badge-sale">-35%</span>
+          <img src="https://m.media-amazon.com/images/I/61SUj2aKoEL._AC_SX679_.jpg" alt="Gucci duffle bag" />
+          <div class="product-actions" style="opacity:1;transform:none;">
+            <button class="product-action-btn" onclick="this.closest('.product-card').remove();showToast('Removed from wishlist')" style="color:var(--primary);">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Gucci duffle bag</p>
+          <div class="product-price"><span class="price-current">$960</span><span class="price-original">$1160</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star empty" style="color:var(--border)"></i></div><span class="rating-count">(35)</span></div>
+        </div>
+      </div>
+
+      <!-- Wishlist Product 2 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/71dk2K4aP1L._AC_SX679_.jpg" alt="RGB liquid CPU Cooler" />
+          <div class="product-actions" style="opacity:1;transform:none;">
+            <button class="product-action-btn" onclick="this.closest('.product-card').remove();" style="color:var(--primary);"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">RGB liquid CPU Cooler</p>
+          <div class="product-price"><span class="price-current">$1960</span><span class="price-original">$2160</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star empty" style="color:var(--border)"></i></div><span class="rating-count">(99)</span></div>
+        </div>
+      </div>
+
+      <!-- Wishlist Product 3 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <span class="product-badge badge-new">NEW</span>
+          <img src="https://m.media-amazon.com/images/I/71JvRMAlpHL._AC_SX679_.jpg" alt="GP11 Shooter USB Gamepad" />
+          <div class="product-actions" style="opacity:1;transform:none;">
+            <button class="product-action-btn" onclick="this.closest('.product-card').remove();" style="color:var(--primary);"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">GP11 Shooter USB Gamepad</p>
+          <div class="product-price"><span class="price-current">$550</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star empty" style="color:var(--border)"></i></div><span class="rating-count">(55)</span></div>
+        </div>
+      </div>
+
+      <!-- Wishlist Product 4 -->
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/71Fr+XT4HpL._AC_SX679_.jpg" alt="Quilted Satin Jacket" />
+          <div class="product-actions" style="opacity:1;transform:none;">
+            <button class="product-action-btn" onclick="this.closest('.product-card').remove();" style="color:var(--primary);"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Quilted Satin Jacket</p>
+          <div class="product-price"><span class="price-current">$750</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star empty" style="color:var(--border)"></i></div><span class="rating-count">(55)</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Just For You -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin:60px 0 32px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="tag-bar"></div>
+        <h2 style="font-size:22px;font-weight:700;">Just For You</h2>
+      </div>
+      <a href="index.html" class="btn btn-secondary">See All</a>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/61sWXOqFYgL._AC_SX679_.jpg" alt="CANON EOS DSLR Camera" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">CANON EOS DSLR Camera</p>
+          <div class="product-price"><span class="price-current">$360</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star empty" style="color:var(--border)"></i></div><span class="rating-count">(95)</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/71PX8ULLT2L._AC_SX679_.jpg" alt="ASUS FHD Gaming Laptop" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">ASUS FHD Gaming Laptop</p>
+          <div class="product-price"><span class="price-current">$700</span><span class="price-original">$1000</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star empty" style="color:var(--border)"></i></div><span class="rating-count">(325)</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/71bVKBPbMLL._AC_SX679_.jpg" alt="Curology Product Set" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Curology Product Set</p>
+          <div class="product-price"><span class="price-current">$500</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star empty" style="color:var(--border)"></i></div><span class="rating-count">(145)</span></div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://m.media-amazon.com/images/I/61mMVJp9NrL._AC_SX679_.jpg" alt="Kids Electric Car" />
+          <div class="product-actions"><button class="product-action-btn wishlist-btn"><i class="far fa-heart"></i></button><button class="product-action-btn quick-view-btn"><i class="far fa-eye"></i></button></div>
+          <div class="product-add-cart">Add To Cart</div>
+        </div>
+        <div class="product-info">
+          <p class="product-name">Kids Electric Car</p>
+          <div class="product-price"><span class="price-current">$960</span></div>
+          <div class="product-rating"><div class="stars"><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star"></i><i class="fas fa-star star empty" style="color:var(--border)"></i></div><span class="rating-count">(65)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; Copyright Rimel 2022. All rights reserved</p></div></div></footer>
+<button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+<div class="toast" id="toast"></div>
+<script>function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}</script>
+<script src="js/main.js"></script>
+</body>
+</html>

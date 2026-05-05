@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Exclusive</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .contact-grid { display: grid; grid-template-columns: 300px 1fr; gap: 32px; margin-top: 40px; }
+    .contact-info-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); overflow: hidden; }
+    .contact-info-section { padding: 32px; border-bottom: 1px solid var(--border); }
+    .contact-info-section:last-child { border-bottom: none; }
+    .contact-info-section h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .contact-info-section p { font-size: 13px; color: var(--text-secondary); line-height: 1.8; }
+    .contact-form-card { background: #fff; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); padding: 40px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 13px; font-weight: 500; color: var(--text-secondary); }
+    .form-group input, .form-group textarea { border: 1px solid var(--border); border-radius: 4px; padding: 12px 14px; font-size: 14px; font-family: var(--font-main); transition: var(--transition); background: var(--bg-light); }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); background: #fff; outline: none; }
+    .form-group textarea { min-height: 160px; resize: vertical; }
+    .contact-form-btn { display: flex; justify-content: flex-end; margin-top: 24px; }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } .form-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-message">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a href="#">Shop Now</a></div>
+    <div class="topbar-links"><select><option>English</option><option>Urdu</option></select></div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Exclusive</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="about.html">About</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="What are you looking for?" />
+          <button type="button"><i class="fas fa-search"></i></button>
+        </div>
+        <a href="wishlist.html" class="header-icon-btn"><i class="far fa-heart"></i><span class="badge">4</span></a>
+        <a href="cart.html" class="header-icon-btn"><i class="fas fa-shopping-cart"></i><span class="badge cart-badge">3</span></a>
+        <a href="account.html" class="header-icon-btn"><i class="far fa-user"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="container" style="padding-top:24px;padding-bottom:0;">
+  <nav style="font-size:13px;color:var(--text-secondary);">
+    <a href="index.html" style="color:var(--text-secondary);">Home</a>
+    <span style="margin:0 8px;">/</span>
+    <span style="color:var(--text-primary);font-weight:500;">Contact</span>
+  </nav>
+</div>
+
+<!-- Contact Section -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Info Cards -->
+      <div class="contact-info-card">
+        <div class="contact-info-section">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+            <div style="width:40px;height:40px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <h3>Call To Us</h3>
+          </div>
+          <p>We are available 24/7, 7 days a week.</p>
+          <p style="margin-top:8px;">Phone: +88015-88888-9999</p>
+        </div>
+        <div class="contact-info-section">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+            <div style="width:40px;height:40px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Write To Us</h3>
+          </div>
+          <p>Fill out our form and we will contact you within 24 hours.</p>
+          <p style="margin-top:8px;">Emails: customer@exclusive.com</p>
+          <p>Emails: support@exclusive.com</p>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form-card">
+        <form onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name *" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email *" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="Your Phone *" />
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message"></textarea>
+          </div>
+          <div class="contact-form-btn">
+            <button type="submit" class="btn btn-primary" style="padding:14px 40px;">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>&copy; Copyright Rimel 2022. All rights reserved</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+<div class="toast" id="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

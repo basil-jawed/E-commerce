@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - Exclusive</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .cart-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; }
+    .cart-table th { text-align: left; padding: 16px; font-size: 14px; font-weight: 500; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+    .cart-table td { padding: 16px; vertical-align: middle; border-bottom: 1px solid var(--border); }
+    .cart-product { display: flex; align-items: center; gap: 16px; }
+    .cart-product-img { width: 70px; height: 70px; border-radius: 4px; overflow: hidden; background: var(--bg-light); display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; }
+    .cart-product-img img { width: 100%; height: 100%; object-fit: contain; }
+    .qty-control { display: flex; align-items: center; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+    .qty-btn { width: 36px; height: 36px; border: none; background: transparent; cursor: pointer; font-size: 16px; transition: var(--transition); display: flex; align-items: center; justify-content: center; }
+    .qty-btn:hover { background: var(--primary); color: #fff; }
+    .qty-input { width: 48px; height: 36px; border: none; border-left: 1px solid var(--border); border-right: 1px solid var(--border); text-align: center; font-family: var(--font-main); font-size: 14px; }
+    .cart-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .coupon-form { display: flex; gap: 16px; }
+    .coupon-input { flex: 1; border: 1px solid var(--border); border-radius: 4px; padding: 12px 16px; font-size: 14px; font-family: var(--font-main); }
+    .cart-summary { border: 1px solid var(--border); border-radius: 8px; padding: 32px; }
+    .cart-summary h3 { font-size: 18px; font-weight: 700; margin-bottom: 24px; }
+    .summary-row { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+    .summary-row:last-of-type { border-bottom: none; }
+    .summary-total { font-weight: 700; }
+    .delete-btn { color: var(--text-muted); cursor: pointer; transition: var(--transition); background: none; border: none; font-size: 18px; }
+    .delete-btn:hover { color: var(--primary); }
+    @media (max-width: 768px) { .cart-bottom { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar"><div class="container"><div class="topbar-message">Summer Sale! Free Express Delivery - OFF 50%! <a href="#">Shop Now</a></div></div></div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Exclusive</a>
+      <nav class="nav">
+        <a href="index.html">Home</a><a href="contact.html">Contact</a><a href="about.html">About</a><a href="signup.html">Sign Up</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-bar"><input type="text" placeholder="What are you looking for?" /><button type="button"><i class="fas fa-search"></i></button></div>
+        <a href="wishlist.html" class="header-icon-btn"><i class="far fa-heart"></i><span class="badge">4</span></a>
+        <a href="cart.html" class="header-icon-btn"><i class="fas fa-shopping-cart"></i><span class="badge" style="background:var(--primary);">3</span></a>
+        <a href="account.html" class="header-icon-btn"><i class="far fa-user"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="container" style="padding-top:24px;padding-bottom:0;">
+  <nav style="font-size:13px;color:var(--text-secondary);">
+    <a href="index.html" style="color:var(--text-secondary);">Home</a> <span style="margin:0 8px;">/</span> <span style="color:var(--text-primary);font-weight:500;">Cart</span>
+  </nav>
+</div>
+
+<!-- Cart Section -->
+<section class="section">
+  <div class="container">
+
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="cart-product">
+              <div class="cart-product-img">🎮</div>
+              <span style="font-size:14px;font-weight:500;">HAVIT HV-G92 Gamepad</span>
+            </div>
+          </td>
+          <td style="color:var(--primary);font-weight:600;">$120</td>
+          <td>
+            <div class="qty-control">
+              <button class="qty-btn" onclick="changeQty(this,-1)">-</button>
+              <input type="number" class="qty-input" value="2" min="1" />
+              <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+            </div>
+          </td>
+          <td style="font-weight:600;">$240</td>
+          <td><button class="delete-btn" onclick="this.closest('tr').remove()"><i class="fas fa-times"></i></button></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-product">
+              <div class="cart-product-img">⌨️</div>
+              <span style="font-size:14px;font-weight:500;">AK-900 Wired Keyboard</span>
+            </div>
+          </td>
+          <td style="color:var(--primary);font-weight:600;">$960</td>
+          <td>
+            <div class="qty-control">
+              <button class="qty-btn" onclick="changeQty(this,-1)">-</button>
+              <input type="number" class="qty-input" value="1" min="1" />
+              <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+            </div>
+          </td>
+          <td style="font-weight:600;">$960</td>
+          <td><button class="delete-btn" onclick="this.closest('tr').remove()"><i class="fas fa-times"></i></button></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="cart-product">
+              <div class="cart-product-img">🖥️</div>
+              <span style="font-size:14px;font-weight:500;">IPS LCD Gaming Monitor</span>
+            </div>
+          </td>
+          <td style="color:var(--primary);font-weight:600;">$370</td>
+          <td>
+            <div class="qty-control">
+              <button class="qty-btn" onclick="changeQty(this,-1)">-</button>
+              <input type="number" class="qty-input" value="1" min="1" />
+              <button class="qty-btn" onclick="changeQty(this,1)">+</button>
+            </div>
+          </td>
+          <td style="font-weight:600;">$370</td>
+          <td><button class="delete-btn" onclick="this.closest('tr').remove()"><i class="fas fa-times"></i></button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Action buttons -->
+    <div style="display:flex;justify-content:space-between;margin-bottom:40px;flex-wrap:wrap;gap:16px;">
+      <a href="index.html" class="btn btn-secondary">Return To Shop</a>
+      <button class="btn btn-secondary" onclick="alert('Cart updated!')">Update Cart</button>
+    </div>
+
+    <!-- Bottom -->
+    <div class="cart-bottom">
+      <!-- Coupon -->
+      <div>
+        <div class="coupon-form">
+          <input type="text" class="coupon-input" placeholder="Coupon Code" />
+          <button class="btn btn-primary" style="padding:12px 24px;">Apply Coupon</button>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="cart-summary">
+        <h3>Cart Total</h3>
+        <div class="summary-row"><span>Subtotal:</span><span>$1570</span></div>
+        <div class="summary-row"><span>Shipping:</span><span style="color:var(--success);font-weight:600;">Free</span></div>
+        <div class="summary-row summary-total"><span>Total:</span><span>$1570</span></div>
+        <a href="#" class="btn btn-primary" style="width:100%;margin-top:24px;justify-content:center;">Proceed to Checkout</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; Copyright Rimel 2022. All rights reserved</p></div></div></footer>
+
+<button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+<div class="toast" id="toast"></div>
+
+<script>
+function changeQty(btn, delta) {
+  const input = btn.parentElement.querySelector('.qty-input');
+  input.value = Math.max(1, parseInt(input.value) + delta);
+}
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Exclusive</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .about-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 60px 0; }
+    .about-hero-content h1 { font-size: 48px; font-weight: 800; line-height: 1.2; margin-bottom: 24px; }
+    .about-hero-content p { font-size: 15px; color: var(--text-secondary); line-height: 1.9; margin-bottom: 16px; }
+    .about-hero-img { background: var(--bg-light); border-radius: 12px; min-height: 400px; display: flex; align-items: center; justify-content: center; font-size: 160px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 60px 0; }
+    .stat-card { border: 1px solid var(--border); border-radius: 8px; padding: 32px 24px; text-align: center; cursor: pointer; transition: var(--transition); }
+    .stat-card:hover, .stat-card.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .stat-card:hover .stat-label, .stat-card.active .stat-label { color: rgba(255,255,255,0.8); }
+    .stat-icon { font-size: 36px; margin-bottom: 12px; }
+    .stat-number { font-size: 28px; font-weight: 800; margin-bottom: 6px; }
+    .stat-label { font-size: 13px; color: var(--text-secondary); }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin: 40px 0; }
+    .team-card { text-align: center; }
+    .team-avatar { width: 100%; aspect-ratio: 1; background: var(--bg-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 80px; margin-bottom: 16px; }
+    .team-name { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+    .team-role { font-size: 13px; color: var(--text-secondary); margin-bottom: 12px; }
+    .team-socials { display: flex; justify-content: center; gap: 12px; }
+    .team-social { width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 14px; transition: var(--transition); }
+    .team-social:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+    @media (max-width: 768px) { .about-hero { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: 1fr 1fr; } .team-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-message">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a href="#">Shop Now</a></div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Exclusive</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html" class="active">About</a>
+        <a href="signup.html">Sign Up</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-bar"><input type="text" placeholder="What are you looking for?" /><button type="button"><i class="fas fa-search"></i></button></div>
+        <a href="wishlist.html" class="header-icon-btn"><i class="far fa-heart"></i><span class="badge">4</span></a>
+        <a href="cart.html" class="header-icon-btn"><i class="fas fa-shopping-cart"></i><span class="badge">3</span></a>
+        <a href="account.html" class="header-icon-btn"><i class="far fa-user"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="container" style="padding-top:24px;">
+  <nav style="font-size:13px;color:var(--text-secondary);">
+    <a href="index.html" style="color:var(--text-secondary);">Home</a>
+    <span style="margin:0 8px;">/</span>
+    <span style="color:var(--text-primary);font-weight:500;">About</span>
+  </nav>
+</div>
+
+<!-- About Hero -->
+<section class="container">
+  <div class="about-hero">
+    <div class="about-hero-content">
+      <h1>Our Story</h1>
+      <p>Launced in 2015, Exclusive is South Asia's premier online shopping makterplace with an active presense in Bangladesh. Supported by wide range of tailored marketing, data and service solutions, Exclusive has 10,500 sallers and 300 brands and serves 3 millioons customers across the region.</p>
+      <p>Exclusive has more than 1 Million products to offer, growing at a very fast. Exclusive offers a diverse assortement in categories ranging from consumer.</p>
+    </div>
+    <div class="about-hero-img">🛍️</div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="container">
+  <div class="stats-grid">
+    <div class="stat-card active">
+      <div class="stat-icon">🏪</div>
+      <div class="stat-number">10.5k</div>
+      <div class="stat-label">Sellers active our site</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">💰</div>
+      <div class="stat-number">33k</div>
+      <div class="stat-label">Monthly Product Sale</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">👥</div>
+      <div class="stat-number">45.5k</div>
+      <div class="stat-label">Customer active in our site</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">💳</div>
+      <div class="stat-number">25k</div>
+      <div class="stat-label">Annual gross sale in our site</div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="section">
+  <div class="container">
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">👩‍💼</div>
+        <h3 class="team-name">Emma Watson</h3>
+        <p class="team-role">Founder & Chairman</p>
+        <div class="team-socials">
+          <a href="#" class="team-social"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="team-social"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="team-social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">👨‍💻</div>
+        <h3 class="team-name">Tom Cruise</h3>
+        <p class="team-role">Managing Director</p>
+        <div class="team-socials">
+          <a href="#" class="team-social"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="team-social"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="team-social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">👩‍🎨</div>
+        <h3 class="team-name">Will Smith</h3>
+        <p class="team-role">Product Designer</p>
+        <div class="team-socials">
+          <a href="#" class="team-social"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="team-social"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="team-social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section">
+  <div class="container">
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon-wrap"><i class="fas fa-shipping-fast service-icon"></i></div>
+        <div><h3 class="service-title">FREE AND FAST DELIVERY</h3><p class="service-desc">Free delivery for all orders over $140</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-wrap"><i class="fas fa-headset service-icon"></i></div>
+        <div><h3 class="service-title">24/7 CUSTOMER SERVICE</h3><p class="service-desc">Friendly 24/7 customer support</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-wrap"><i class="fas fa-shield-alt service-icon"></i></div>
+        <div><h3 class="service-title">MONEY BACK GUARANTEE</h3><p class="service-desc">We return money within 30 days</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; Copyright Rimel 2022. All rights reserved</p></div></div></footer>
+
+<button class="scroll-top"><i class="fas fa-arrow-up"></i></button>
+<div class="toast" id="toast"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
